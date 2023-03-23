@@ -65,7 +65,7 @@ new product("https://cdn.shopify.com/s/files/1/0037/5209/9958/products/f96dc4f71
                 <h1><?php echo $prod->titolo ?></h1>
                 <p><?php echo $prod->prezzo ?></p>
                 <p><?php echo $prod->icona ?></p>
-                <p><?php echo $prod->Tipo->animalededicato?></p>
+                <p><?php echo $prod->tipo->animalededicato?></p>
                 
             </div>
             <?php endforeach;?>
