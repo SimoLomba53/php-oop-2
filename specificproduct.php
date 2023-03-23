@@ -17,7 +17,7 @@
 
 
 
-
+//var_dump($cuccadog,$cuccacat,$crocchettedog,$crocchettecat,$legnettodog,$pallinacat)
 
 
 

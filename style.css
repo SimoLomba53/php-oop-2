@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 200px;
+}
+
+.card img {
+  width: 250px;
+}
+
+.card h1 {
+  font-size: 15px;
+}
