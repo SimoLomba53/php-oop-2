@@ -1,19 +1,24 @@
 <?php
+require_once __DIR__ . "/index.php";
+
+class specificproduct extends product{
+     public $immagine;
+     public $titolo;    
+     public $prezzo;
+     public $icona;  
+     public $tipo; 
+     public $provenienza; 
+     public $peso; 
+     
 
 
-//class specificproduct extends Product{
-    //public $animali;
-    //public $cibo;
-    //public $giochi;
-    //public $cucce;
 
+   function __construct($provenienza,$peso) {
+        $this->provenienza=$provenienza;
+        $this->peso=$peso;
+ }
+}
 
-    //function __construct($cibo,$giochi,$cucce) {
-        //$this->cibo=$cibo;
-        //$this->giochi=$giochi;
-        //$this->cucce=$cucce;
- //}
-//}
 
 
 
