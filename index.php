@@ -57,14 +57,15 @@ new product("https://cdn.shopify.com/s/files/1/0037/5209/9958/products/f96dc4f71
 </head>
 <body>
     <div>
+        <h1 class="maintitle">IL NOSTRO CATALOGO</h1>
         <div class="card">
             <?php foreach($products as $prod) : ?>
-            <div>
+            <div class="singlelement">
                 <img src="<?php echo $prod->immagine ?>" alt="">
                 <h1><?php echo $prod->titolo ?></h1>
                 <p><?php echo $prod->prezzo ?></p>
                 <p><?php echo $prod->icona ?></p>
-                <p><?php $prod->tipo ?></p>
+                
             </div>
             <?php endforeach;?>
         </div>
