@@ -2,48 +2,41 @@
 require_once __DIR__ . "/specificproduct.php";
 
 class Product{
-    public $animali;
-    public $variprodotti;
+     public $immagine;
+     public $titolo;    
+     public $prezzo;
+     public $icona;  
+     public $tipo; 
 
 
  
-    function __construct($animali,Variprodotti $variprodotti) {
-        $this->animali=$animali;
-        $this->variprodotti=$variprodotti;
-
- }
-};
-
-class Variprodotti{
-    public $cibo;
-    public $giochi;
-    public $cucce;
-
-    public function __construct( $cibo,$giochi,$cucce) {
-       $this->cibo=$cibo;
-       $this->giochi=$giochi;    
-       $this->cucce=$cucce; 
-    }
-}
-
-class Dettagli{
-    public $immagine;
-    public $titolo;
-    public $prezzo;
-    public $icona;
-    public $tipo;
-    
-    public function __construct( $immagine,$titolo,$prezzo,$icona,$tipo) {
+    function __construct($immagine,$titolo,$prezzo,$icona,Tipo $tipo) {
        $this->immagine=$immagine;
        $this->titolo=$titolo;    
        $this->prezzo=$prezzo;
        $this->icona=$icona;  
        $this->tipo=$tipo; 
-    }
+
+ }
+};
+
+class Tipo{
+    public $animalededicato;
+
+
+public function __construct($animalededicato){
+    $this->animalededicato=$animalededicato;
+}
 }
 
-  $cani=new Product("Cani",new Variprodotti(new Dettagli("img","Crocchette Dog","19.90$","icona","Prodotto per cani"),new Dettagli("img","Finto Legnetto","9.90$","icona","Prodotto per cani"),new Dettagli("img","Cucca Jackson Wood","69.90$","icona","Prodotto per cani")));
-  $gatti=new Product("Gatti",new Variprodotti("Scatoletta Cats","Pallina gonfiabile","Yaheetch Albero Tiragraffi"));
+$cuccadog=new Product("img","Cuccia Spike Classic","89.99$","icon",new Tipo("Prodotto per cani"));
+$cuccacat=new Product("img","yaheetch Albero Tiragraffi","49.99$",icon,new Tipo("Prodotto per gatti"));
+$crocchettedog=new Product("img","Friskies - Crocchette proteiche","19.99$","icon",new Tipo("Prodotto per cani"));
+$crocchettecat=new Product("img","Ultra premium - Crocchette per gatti","9.99$",icon,new Tipo("Prodotto per gatti"));
+$legnettodog=new Product("img","Burna - Gioco per cani","4.99$","icon",new Tipo("Prodotto per cani"));
+$pallinacat=new Product("img","Cheerble Ball - Palla interattiva per gatti","49.99$",icon,new Tipo("Prodotto per gatti"));
 
-  var_dump($cani,$gatti);
+
+  
+
 ?>
